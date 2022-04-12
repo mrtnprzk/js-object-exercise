@@ -12,7 +12,7 @@ for (let i = 0; i < personMe.favouriteFood.length; i++) {
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(personMe.favouriteFood[i]));
     ul.appendChild(li)
-}
+};
 
 
 
@@ -23,11 +23,17 @@ function Person (name, age, country, favouriteFood) {
     this.name = name;
     this.country = country;
     this.favouriteFood = favouriteFood;
-}
+
+    //Constructor Function
+    this.sayHello = function() {
+        alert ("Hello Everyone! My name is " + name);
+    };
+};
 
     //Initialise Object
-    const personSister = new Person("Tamara", 11, "Slovakia", ["onion", "chips"])
-    console.log(personSister)
+    const personSister = new Person("Tamara", 11, "Slovakia", ["onion", "chips"]);
+    console.log(personSister);
+    personSister.sayHello();
 
 
 //just testing
